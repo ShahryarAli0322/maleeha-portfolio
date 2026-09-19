@@ -1,5 +1,6 @@
 import { type FormEvent, useState } from "react";
 import spatialData from "../assets/interests/spatial-data.jpg";
+import { SocialLinks } from "../components/Navbar";
 import { contact, hero, site } from "../data/content";
 import { isEmailConfigured, sendContactEmail } from "../lib/email";
 
@@ -222,6 +223,8 @@ export function Contact() {
               </div>
             </li>
           </ul>
+
+          <SocialLinks />
 
           <p className="contact-note">{contact.note}</p>
 

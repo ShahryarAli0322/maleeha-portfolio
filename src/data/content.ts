@@ -12,6 +12,19 @@ export const site = {
   cvAvailable: true,
 };
 
+export const socials = [
+  {
+    id: "linkedin" as const,
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/maleeha-abid-b76aa8364",
+  },
+  {
+    id: "instagram" as const,
+    label: "Instagram",
+    href: "https://www.instagram.com/aleena_blog02/",
+  },
+];
+
 export const nav = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },

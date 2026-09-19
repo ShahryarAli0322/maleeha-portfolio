@@ -3855,6 +3855,47 @@ section.block.interests-section {
   color: var(--ink-soft);
 }
 
+.social-links {
+  position: relative;
+  display: flex;
+  gap: 0.7rem;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  list-style: none;
+}
+
+.social-links a {
+  display: grid;
+  place-items: center;
+  width: 2.7rem;
+  height: 2.7rem;
+  border-radius: 50%;
+  border: 1px solid rgba(224, 224, 224, 0.22);
+  background: rgba(18, 18, 18, 0.72);
+  color: var(--ink);
+}
+
+.social-links a[data-network="linkedin"] {
+  border-color: var(--forest);
+  background: var(--forest);
+  color: #fff;
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+  border-color: var(--soil);
+  color: #fff;
+}
+
+.social-links svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.footer .social-links {
+  margin: 0;
+}
+
 .contact-list {
   position: relative;
   list-style: none;
@@ -4133,6 +4174,7 @@ section.block.interests-section {
 
 .footer-inner {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
