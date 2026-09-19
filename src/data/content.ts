@@ -8,7 +8,7 @@ export const site = {
   location: "Lahore, Pakistan",
   email: "malihaabid02@gmail.com",
   phone: "+92 325 8322544",
-  cvPath: "./assets/Maleeha_Abid_CV.pdf",
+  cvPath: "/assets/Maleeha_Abid_CV.pdf",
   cvAvailable: true,
 };
 
@@ -225,7 +225,7 @@ export const internship = {
     },
   ],
   certificate: {
-    src: "./assets/internship/certificate.jpg",
+    src: "/assets/internship/certificate.jpg",
     caption: "Internship Certificate, Soil Survey of Punjab, Lahore, 06–28 August 2026.",
     alt: "Internship certificate from the Soil Survey of Punjab, Lahore, awarded to Maleeha Abid, BSc Geography, for the internship from 06 August 2026 to 28 August 2026, covering GIS tools, digitisation, and layout composition for soil maps.",
   },

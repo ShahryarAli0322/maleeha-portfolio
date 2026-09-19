@@ -18,6 +18,25 @@ npm run build
 npm run preview
 ```
 
+## Deploy on Vercel
+
+1. Import [ShahryarAli0322/maleeha-portfolio](https://github.com/ShahryarAli0322/maleeha-portfolio) in [Vercel](https://vercel.com/new).
+2. Framework Preset: **Vite**
+3. Root Directory: `.` (leave as the repository root)
+4. Build Command: `npm run build`
+5. Output Directory: `dist`
+6. Add these environment variables if the contact form should send email:
+
+| Name | Value |
+| --- | --- |
+| `VITE_EMAILJS_SERVICE_ID` | EmailJS service ID |
+| `VITE_EMAILJS_TEMPLATE_ID` | EmailJS template ID |
+| `VITE_EMAILJS_PUBLIC_KEY` | EmailJS public key |
+
+7. Deploy. After changing env vars, trigger a new deployment so Vite can bake them into the build.
+
+The contact form works without those keys, but submissions will not send until they are set.
+
 ## Update text
 
 Edit `src/data/content.ts`. Page sections read from that file.
@@ -33,5 +52,3 @@ Edit `src/data/content.ts`. Page sections read from that file.
 After adding images, update the matching entries in `src/data/content.ts` so the placeholder frames can be replaced with real figures.
 
 Do not fill placeholders with stock maps. Only add work that is yours.
-
-LinkedIn and GitHub are omitted until real URLs are provided.
