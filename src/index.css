@@ -3402,6 +3402,139 @@ section.block.workshops-section {
   stroke-linejoin: round;
 }
 
+section.block.interests-section {
+  position: relative;
+  overflow: hidden;
+  padding: 3.4rem 0 4.2rem;
+}
+
+.interests-stage {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.interests-stage-grid {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  stroke: rgba(108, 99, 255, 0.08);
+  stroke-width: 1;
+}
+
+.interests-stage-map {
+  position: absolute;
+  inset: 0 0 0 30%;
+  overflow: hidden;
+  opacity: 0.24;
+  -webkit-mask-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.7) 28%, rgba(0, 0, 0, 0.85) 68%, transparent);
+  mask-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.7) 28%, rgba(0, 0, 0, 0.85) 68%, transparent);
+}
+
+.interests-stage-map img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% 40%;
+  filter: saturate(0.7) brightness(0.5);
+}
+
+.interests-globe {
+  position: absolute;
+  right: -6rem;
+  bottom: -5rem;
+  width: min(26rem, 38vw);
+  height: auto;
+  fill: none;
+  stroke: rgba(108, 99, 255, 0.22);
+  stroke-width: 1.2;
+}
+
+.interests-compass {
+  position: absolute;
+  top: 1.05rem;
+  right: 1.25rem;
+  z-index: 2;
+  display: grid;
+  justify-items: center;
+  gap: 0.08rem;
+  color: var(--soil);
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.16em;
+}
+
+.interests-compass b {
+  font-weight: 500;
+}
+
+.interests-compass-ring {
+  display: flex;
+  align-items: center;
+  gap: 0.28rem;
+}
+
+.interests-compass svg {
+  width: 2.15rem;
+  height: 2.15rem;
+  fill: var(--forest);
+  stroke: rgba(157, 151, 255, 0.75);
+  stroke-width: 1.3;
+}
+
+.interests-coords {
+  position: absolute;
+  left: 1.35rem;
+  bottom: 1.2rem;
+  z-index: 2;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.12em;
+  color: rgba(224, 224, 224, 0.5);
+}
+
+.interests-coords-mark {
+  color: var(--soil);
+  font-size: 0.95rem;
+}
+
+.interests-coords > span:last-child {
+  display: grid;
+  gap: 0.12rem;
+}
+
+.interests-shell {
+  position: relative;
+  z-index: 1;
+  width: min(1280px, 100%);
+}
+
+.interests-section h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.85rem, 4.2vw, 3.35rem);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.85rem;
+  white-space: nowrap;
+}
+
+.interests-section h2 em {
+  font-style: normal;
+  color: var(--forest);
+}
+
+.interests-intro {
+  margin: 0 0 1.8rem;
+  max-width: 42rem;
+  color: var(--ink-soft);
+}
+
 .interest-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -3990,7 +4123,10 @@ section.block.workshops-section {
   .education-coords,
   .workshops-compass,
   .workshops-globe,
-  .workshops-coords {
+  .workshops-coords,
+  .interests-compass,
+  .interests-globe,
+  .interests-coords {
     display: none;
   }
 
@@ -4002,7 +4138,8 @@ section.block.workshops-section {
   .projects-section h2,
   .maps-section h2,
   .education-section h2,
-  .workshops-section h2 {
+  .workshops-section h2,
+  .interests-section h2 {
     white-space: normal;
   }
 

@@ -378,22 +378,60 @@ function InterestIcon({
 export function Interests() {
   return (
     <section className="block interests-section" id="interests" aria-labelledby="interests-title">
-      <div className="sheet">
-        <header className="education-head">
-          <div>
-            <div className="section-head">
-              <span className="section-index">08</span>
-              <h2 id="interests-title">Areas of Interest</h2>
-              <p>Directions I am developing through study, internship work, and further training.</p>
-            </div>
-          </div>
-          <aside className="education-note">
-            <span className="education-note-icon" aria-hidden="true">
-              <InterestIcon name="leaf" />
-            </span>
-            <p>{about.lead}</p>
-          </aside>
-        </header>
+      <div className="interests-stage" aria-hidden="true">
+        <svg className="interests-stage-grid" viewBox="0 0 1440 820" preserveAspectRatio="none">
+          {Array.from({ length: 19 }, (_, index) => (
+            <line key={`v-${index}`} x1={80 * index} y1="0" x2={80 * index} y2="820" />
+          ))}
+          {Array.from({ length: 12 }, (_, index) => (
+            <line key={`h-${index}`} x1="0" y1={74 * index} x2="1440" y2={74 * index} />
+          ))}
+        </svg>
+        <div className="interests-stage-map">
+          <img src={remoteSensing} alt="" />
+        </div>
+        <svg className="interests-globe" viewBox="0 0 280 280">
+          <circle cx="140" cy="140" r="128" />
+          <circle cx="140" cy="140" r="96" />
+          <ellipse cx="140" cy="140" rx="46" ry="128" />
+          <ellipse cx="140" cy="140" rx="96" ry="128" />
+          <ellipse cx="140" cy="140" rx="128" ry="46" />
+          <ellipse cx="140" cy="140" rx="128" ry="96" />
+        </svg>
+      </div>
+      <div className="interests-compass" aria-hidden="true">
+        <b>N</b>
+        <span className="interests-compass-ring">
+          <b>W</b>
+          <svg viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="17.5" />
+            <path d="M24 9.5 26.6 24 24 21.4 21.4 24 Z" />
+            <path d="M24 38.5 21.4 24 24 26.6 26.6 24 Z" />
+          </svg>
+          <b>E</b>
+        </span>
+        <b>S</b>
+      </div>
+      <p className="interests-coords">
+        <span className="interests-coords-mark">+</span>
+        <span>
+          <span>{hero.coordinates[0]}</span>
+          <span>{hero.coordinates[1]}</span>
+        </span>
+      </p>
+
+      <div className="sheet interests-shell">
+        <div className="about-kicker-row">
+          <span className="section-index">08</span>
+          <span className="about-kicker-line" />
+          <span>Areas of interest</span>
+        </div>
+        <h2 id="interests-title">
+          Areas of <em>Interest</em>
+        </h2>
+        <p className="interests-intro">
+          Directions I am developing through study, internship work, and further training.
+        </p>
 
         <div className="interest-grid">
           {interests.map((item) => (
